@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+</head>
+
+<body>
+        <div class="row">
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item tuit-icon"><i class="fas fa-crow"></i></li>
+                    <li class="list-group-item"><i class="fas fa-home"></i> <a href="home.html"> Home</a></li>
+                    <li class="list-group-item active"><i class="fas fa-compass"></i> <a href="./explore/index.html">
+                            Explore</a></li>
+                    <li class="list-group-item"><i class="fas fa-cogs"></i> <a href="./explore/explore-css.html">
+                            Explore(CSS)</a></li>
+                    <li class="list-group-item"><i class="fas fa-bell"></i> <a href="notifications.html">
+                            Notifications</a></li>
+                    <li class="list-group-item"><i class="fas fa-envelope"></i> <a href="messages.html"> Messages</a>
+                    </li>
+                    <li class="list-group-item"><i class="fas fa-bookmark"></i> <a href="bookmarks.html"> Bookmarks</a>
+                    </li>
+                    <li class="list-group-item"><i class="fas fa-book"></i> <a href="./bookmarks/bookmarks-css.html">
+                            Bookmarks(CSS)</a></li>
+                    <li class="list-group-item"><i class="fas fa-list"></i> <a href="lists.html"> Lists</a></li>
+                    <li class="list-group-item"><i class="fas fa-user"></i> <a href="profile.html"> Profile</a></li>
+                    <li class="list-group-item"><i class="fas fa-pencil-alt"></i> <a href="tuit.html"> Tuit</a></li>
+                    <li class="list-group-item"><i class="fas fa-reply"></i> <a href="reply.html"> Reply</a></li>
+                    <button type="button" class="btn btn-primary rounded-pill tuit-button">Tuit</button>
+                </ul>
+            </div>
+            <div class="col">
+                <div class="tuit-content-container">
+                    <div class="wd-search-container">
+                        <i class="fas fa-search wd-search-icon"></i>
+                        <input type="text" class="wd-search-input" style="width: 600px;" placeholder="  Search Tuiter">
+                        <button class="wd-gear-icon">&#x2699;</button>
+                    </div>
+                    <ul class="nav nav-tabs tuit-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">For You</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Entertainment</a>
+                        </li>
+                    </ul>
+                    <div class="wd-tab-image-container">
+                        <img src="tuit-banner-example.jpg" alt="Tab Image" class="tuit-image">
+                        <h1 class="wd-tab-image-overlay tuit-banner-text">US heatwave: temperatures could set new
+                            records</h1>
+                    </div>
+                    <div class="tuit-main-content">
+                        <ul class="list-group tuit-main-content-list">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Politics · Trending - 2h</h6>
+                                        <h5>Georgia Supreme Court</h5>
+                                        <h6>29.7K Tweets</h6>
+                                    </div>
+                                    <div class="col">
+                                        <img src="test-user1.jpg" class="tuiter-trending-aviator">
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Trending in Food</h6>
+                                        <h5>Dalvin Cook</h5>
+                                        <h6>1,688 Tweets</h6>
+                                    </div>
+                                    <div class="col">
+                                        <img src="test-user3.jpg" class="tuiter-trending-aviator">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Trending in United States</h6>
+                                        <h5>#HowIdLikeToBeRemembered</h5>
+                                        <h6>13,682 Tweets</h6>
+                                    </div>
+                                    <div class="col">
+                                        <img src="test-user2.jpg" class="tuiter-trending-aviator">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Sports · Trending/h6>
+                                            <h5>#VikingRules</h5>
+                                            <h6>111,688 Tweets</h6>
+                                    </div>
+                                    <div class="col">
+                                        <img src="test-user4.jpg" class="tuiter-trending-aviator">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="tuit-who-to-follow-modal">
+                    <ul class="list-group tuit-who-to-follow-list-group">
+                        <li class="list-group-item"><b>Who to follow</b></li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="test-user1.jpg" class="rounded-circle who-to-follow-image"
+                                        alt="who to follow 1">
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="tuit-who-to-follow-intro">
+                                        <b>JavaCat</b>
+                                        <br />
+                                        @jkat
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <button type="button"
+                                        class="btn btn-primary rounded-pill tuit-button">Follow</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="test-user3.jpg" class="rounded-circle who-to-follow-image"
+                                        alt="who to follow 1">
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="tuit-who-to-follow-intro">
+                                        <b>PHPDemon</b>
+                                        <br />
+                                        @thebestlangu
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <button type="button"
+                                        class="btn btn-primary rounded-pill tuit-button">Follow</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="test-user2.jpg" class="rounded-circle who-to-follow-image"
+                                        alt="who to follow 1">
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="tuit-who-to-follow-intro">
+                                        <b>C# Lion</b>
+                                        <br />
+                                        @ceesharplee
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <button type="button"
+                                        class="btn btn-primary rounded-pill tuit-button">Follow</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="test-user4.jpg" class="rounded-circle who-to-follow-image"
+                                        alt="who to follow 1">
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="tuit-who-to-follow-intro">
+                                        <b>Python</b>
+                                        <br />
+                                        @fakefroggy
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <button type="button"
+                                        class="btn btn-primary rounded-pill tuit-button">Follow</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
