@@ -1,5 +1,6 @@
 import React from "react";
 import tuitsArray from './tuits.json';
+import TuitStats from '../tuits/tuit-stats';
 
 const TuitSummaryList = () => {
  return(
@@ -38,11 +39,10 @@ const TuitSummaryItem2 = (
        <img width={70} alt="" className="float-end rounded-3" src={require(`./${tuit.image}`)}/>
      </div>
    </div>
+    <TuitStats likes={tuit.likes} replies={tuit.replies} retuits={tuit.retuits} ifIsLiked={tuit.liked}/>
   </li>
   </div>
  );
 };
-
-
 
 export default TuitSummaryList;
