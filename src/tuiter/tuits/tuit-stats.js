@@ -6,7 +6,8 @@ import {
   faHeart,
   faUpload,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { updateTuitThunk } from "../services/tuits-thunks";
+import { useDispatch } from "react-redux";
 const TuitStats = ({ replies, retuits, likes, ifIsLiked, onReplyClick, onRetuitsClick, onUploadClick}) => {
     const [isLiked, setIsLiked] = useState(ifIsLiked);
     const [Countlikes, setCountLikes] = useState(likes);
@@ -14,6 +15,7 @@ const TuitStats = ({ replies, retuits, likes, ifIsLiked, onReplyClick, onRetuits
         setIsLiked(!isLiked);
         setCountLikes(Countlikes => (isLiked ? Countlikes - 1 : Countlikes + 1));
     };
+    const dispatch = useDispatch();
  return (    
         <div className="row">
         <div className="col"></div>
@@ -25,7 +27,9 @@ const TuitStats = ({ replies, retuits, likes, ifIsLiked, onReplyClick, onRetuits
             </div>
             <div className="col">
                 <FontAwesomeIcon
-                onClick={handleLikeClick}
+                  onClick={() =>
+    dispatch(updateTuitThunk({ likes: Countlikes + 1 }))
+  }
                 icon={faHeart}
                 style={{ color: isLiked ? "red" : "black" }}
                 />{" "}
