@@ -9,8 +9,16 @@ import ExploreScreen from "./tuiter/navigation-sidebar/explore-screen";
 import ProfileScreen from "./tuiter/navigation-sidebar/profile-screen";
 import Assignment3 from "./labs/a3";
 import Assignment4 from "./labs/a4";
-
+import { Provider } from "react-redux";
+import { configureStore } from '@reduxjs/toolkit';
+import tuitsReducer from "./tuiter/reducers/tuits-reducer";
+import whoReducer from "./tuiter/reducers/who-reducer";
+import LoginScreen from "./tuiter/user/login-screen";
+import RegisterScreen from "./tuiter/user/register";
+import authReducer from "./tuiter/reducers/auth-reducer";
 function App() {
+  const store = configureStore(
+  {reducer: {who: whoReducer, tuits: tuitsReducer, user: authReducer}});
   useEffect(() => {
     if (window.location.pathname === "/tuiter") {
       window.location.href = "/tuiter/home";
@@ -18,6 +26,7 @@ function App() {
   }, []);
 
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/labs" />} />
@@ -29,9 +38,12 @@ function App() {
         <Route path="/tuiter/home" element={<HomeScreen />} />
         <Route path="/tuiter/explore" element={<ExploreScreen />} />
         <Route path="/tuiter/bookmarks" element={<BookmarksScreen />} />
+        <Route path="/tuiter/login" element={<LoginScreen />} />
+        <Route path="/tuiter/register" element={<RegisterScreen />} />
         <Route path="/tuiter/profile" element={<ProfileScreen />} />
       </Routes>
     </BrowserRouter>
+    </Provider>
   );
 }
 

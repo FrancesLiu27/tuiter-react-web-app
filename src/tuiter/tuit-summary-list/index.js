@@ -1,8 +1,15 @@
-import React from "react";
+import React , {useEffect} from "react";
 import tuitsArray from './tuits.json';
 import TuitStats from '../tuits/tuit-stats';
+import {useDispatch, useSelector} from "react-redux";
+import {findTuitsThunk} from "../services/tuits-thunks";
 
 const TuitSummaryList = () => {
+ const dispatch = useDispatch();
+  useEffect(() => {
+   dispatch(findTuitsThunk())
+ }, [])
+
  return(
    <ul className="list-group">
      {

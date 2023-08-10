@@ -6,10 +6,12 @@ import WhatsHappening from "../whats-happening";
 import { configureStore } from '@reduxjs/toolkit';
 import {createTuit} from "../reducers/tuits-reducer" 
 import { Provider } from "react-redux";
+import authReducer from "../reducers/auth-reducer";
 function ExploreScreen() {
 const store = configureStore({
   reducer: {
     tuits: createTuit,
+    user: authReducer
   },
 });
  return (

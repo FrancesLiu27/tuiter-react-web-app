@@ -5,7 +5,7 @@ import { BsEmojiSmile } from "react-icons/bs";
 import { TiCalendarOutline } from "react-icons/ti";
 import { BiBold, BiItalic } from "react-icons/bi";
 import { HiOutlineLocationMarker, HiOutlineGift } from "react-icons/hi";
-import {createTuit} from "./reducers/tuits-reducer";
+import {createTuitThunk} from "./services/tuits-thunks";
 import {useDispatch} from "react-redux";
 import TuitStats from "./tuits/tuit-stats";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,14 +28,14 @@ const currentTime = new Date();
    }
    if (whatsHappening.trim() === "") {
       return; }
-   dispatch(createTuit(newTuit));
+   dispatch(createTuitThunk(newTuit));
    setPost(whatsHappening);
    setWhatsHappening("");
    setShouldShow(true);
   };
 
     const deleteClickHandler = () => {
-    dispatch(createTuit(newTuit));
+    dispatch(createTuitThunk(newTuit));
     setPost(whatsHappening);
     setWhatsHappening("");
     setShouldShow(false);
